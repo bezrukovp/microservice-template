@@ -16,8 +16,10 @@ RUN apt-get update \
 
 COPY / /app/
 
-WORKDIR: /app/
+WORKDIR /app/
 
 RUN ./mvnw package
+
+EXPOSE 8080
 
 CMD [ "/app/target/location-service-1.0-SNAPSHOT.jar"]

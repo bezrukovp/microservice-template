@@ -25,7 +25,7 @@ public class LocationDAOImpl implements LocationDAO {
 
 
     public LocationDto getLocation(Long id) {
-        return locationDtos.get(Integer.parseInt(String.valueOf(id)));
+        return locationDtos.get(Integer.parseInt(String.valueOf(id%10)));
     }
 
     public List<LocationDto> getLocations(){

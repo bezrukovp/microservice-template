@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM maven:3-jdk-8
 
 RUN apt-get update \
     && apt-get install -y mc vim nano curl tar gzip unzip telnet net-tools locales locales-all \
@@ -14,7 +14,6 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/archive.tgz
 
-RUN apt update && apt-get install maven
 
 COPY / /app/
 

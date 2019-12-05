@@ -22,7 +22,7 @@ public class LocationController {
         return locationDAO.getLocation(id);
     }
 
-    @GetMapping(value = "/", produces = "application/json")
+    @GetMapping(produces = "application/json")
     public @ResponseBody List<LocationDto> getLocations(){
         return locationDAO.getLocations();
     }

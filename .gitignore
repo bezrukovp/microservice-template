@@ -1,0 +1,18 @@
+# macOS:
+*.DS_Store
+._*
+
+# IDEs and Editors:
+.idea
+.vscode
+.sw[a-p]
+.*.sw[a-p]
+*~
+*.iml
+
+# Scala:
+*.class
+*.log
+target/
+
+!.gitkeep

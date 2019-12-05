@@ -14,11 +14,13 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/archive.tgz
 
+RUN apt update && apt-get install maven
+
 COPY / /app/
 
 WORKDIR /app/
 
-RUN ./mvnw package
+RUN mvn package
 
 EXPOSE 8080
 

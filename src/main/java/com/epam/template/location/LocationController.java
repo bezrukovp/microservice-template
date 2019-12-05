@@ -1,7 +1,11 @@
 package com.epam.template.location;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -12,12 +16,13 @@ public class LocationController {
     @Autowired
     LocationDAOImpl locationDAO;
 
-    @GetMapping("/{id}", produces = "application/json")
-    public @ResponseBody LocationDto getLocation(@PathVariable long id) {
+    @GetMapping(value = "/{id}", produces = "application/json")
+    public @ResponseBody
+    LocationDto getLocation(@PathVariable long id) {
         return locationDAO.getLocation(id);
     }
 
-    @GetMapping("/", produces = "application/json")
+    @GetMapping(value = "/", produces = "application/json")
     public List<LocationDto> getLocations(){
         return locationDAO.getLocations();
     }

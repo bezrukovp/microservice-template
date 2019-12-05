@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface LocationDAO {
 
-    public LocationDto getLocation(long id);
+    public LocationDto getLocation(Long id);
     public List<LocationDto> getLocations();
 }

@@ -42,7 +42,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
+<!--      <scope>test</scope>-->
     </dependency>
 
     <!-- H2 for testing -->
@@ -58,6 +58,19 @@
     <version>2.1.5.RELEASE</version>
     <relativePath/>
   </parent>
+
+  <build>
+    <plugins>
+      <plugin>
+        <configuration><executable>true</executable></configuration>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+  </build>
+
+
 
 
 </project>
